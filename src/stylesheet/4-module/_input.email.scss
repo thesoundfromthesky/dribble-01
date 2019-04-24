@@ -1,0 +1,16 @@
+.ipt-email {
+  width: 100%;
+  max-width: ratio(10);
+
+  color: white;
+  caret-color: #fff;
+
+  border-bottom: 0.1em solid #fff;
+
+  margin-right: 3em;
+
+  padding-bottom: 1em;
+  &::placeholder {
+    color: #fff;
+  }
+}

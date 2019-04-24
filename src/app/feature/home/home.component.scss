@@ -1,0 +1,26 @@
+@import "src/stylesheet/1-helper/1-helper";
+
+section {
+  background: url("/assets/img/work-env.png") no-repeat right center / 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    margin-top: 1.5em;
+  }
+  form {
+    margin-top: 3em;
+    display: flex;
+    align-items: center;
+
+    button {
+      padding-right: ratio(1.3);
+    }
+  }
+
+  @include media(laptop-L) {
+    padding-left: 2.5em;
+  }
+}

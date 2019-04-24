@@ -1,0 +1,34 @@
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  position: relative;
+
+  &.btn-yel {
+    border-radius: 10em;
+    background: #fca11c;
+    box-shadow: 0.2em 0.2em 0.2em #00000059;
+  }
+
+  &.btn-tear::after {
+    content: "@";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 25.6%;
+    height: 100%;
+    border: ratio(0.05) solid #6137fa;
+    background: #6137fa;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(-45deg);
+  }
+
+  &.btn-arrow::after {
+    content: "\02C7";
+    position: absolute;
+    top: 40%;
+    right: 10%;
+  }
+}

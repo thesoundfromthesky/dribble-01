@@ -1,0 +1,19 @@
+@import "src/stylesheet/1-helper/1-helper";
+
+:host {
+  display: contents;
+}
+
+::ng-deep router-outlet {
+  display: contents;
+}
+
+::ng-deep router-outlet + * {
+  display: grid;
+}
+
+.backdrop {
+  display: grid;
+  opacity: 0.7;
+  background: #1d0a0ab0;
+}

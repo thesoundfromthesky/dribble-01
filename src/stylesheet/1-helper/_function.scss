@@ -1,0 +1,31 @@
+@function varvw($var) {
+  @return #{"calc(var(" + $var + ") * 1vw)"};
+}
+
+@function varrem($var) {
+  @return #{"calc(var(" + $var + ") * 1rem)"};
+}
+
+@function varem($var) {
+  @return #{"calc(var(" + $var + ") * 1em)"};
+}
+
+@function varpx($var) {
+  @return #{"calc(var(" + $var + ") * 1px)"};
+}
+
+@function multiply($a, $b) {
+  @return #{"calc(var(" + $a + ") * var(" + $b + "))"};
+}
+
+//sholud be vwProduct
+@function multiply2($a) {
+  $vw: varvw(--vw);
+  @return #{"calc(var(" + $a + ")  + " + $vw + ")"};
+}
+
+//sholud be vwRatio
+@function ratio($a) {
+  $vw: varvw(--vw);
+  @return #{"calc((var(--font-size) + " + $vw + ") * " + $a + ")"};
+}

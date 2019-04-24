@@ -1,5 +1,8 @@
 # Sample001
 
+1. I found design from https://dribbble.com/shots/6363084-Website-concept-for-a-web-development-agency/attachments
+I gave a shot to write code for practice.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
 
 ## Development server

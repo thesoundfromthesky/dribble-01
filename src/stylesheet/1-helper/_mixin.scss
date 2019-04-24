@@ -1,0 +1,15 @@
+@mixin media($query) {
+  @if $query == "tablet" {
+    @media only screen and (min-width: $breakpoint-tablet * 1px) {
+      @content;
+    }
+  } @else if $query == "laptop-L" {
+    @media only screen and (min-width: $breakpoint-laptop-L * 1px) {
+      @content;
+    }
+  } @else if $query == "desktop-4k" {
+    @media only screen and (min-width: $breakpoint-desktop-4k * 1px) {
+      @content;
+    }
+  }
+}

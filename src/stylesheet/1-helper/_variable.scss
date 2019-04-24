@@ -1,0 +1,64 @@
+// media query breakpoints
+$breakpoint-mobile-S: 320;
+$breakpoint-mobile-M: 375;
+$breakpoint-mobile-L: 425;
+
+$breakpoint-tablet: 768;
+
+$breakpoint-laptop: 1024;
+$breakpoint-laptop-L: 1440;
+
+$breakpoint-desktop-4k: 2560;
+
+:root {
+  // media query breakpoints
+  --breakpoint-mobile-S: #{$breakpoint-mobile-S};
+  --breakpoint-mobile-M: #{$breakpoint-mobile-M};
+  --breakpoint-mobile-L: #{$breakpoint-mobile-L};
+
+  --breakpoint-tablet: #{$breakpoint-tablet};
+
+  --breakpoint-laptop: #{$breakpoint-laptop};
+  --breakpoint-laptop-L: #{$breakpoint-laptop-L};
+
+  --breakpoint-desktop-4k: #{$breakpoint-desktop-4k};
+
+  // font size
+  --font-size: 1rem;
+  --ratio: 1.333;
+  --ratio-laptop-L: 1.68;
+  --ratio-desktop-4k: 1.87;
+
+  --vw: 1;
+  // --font-size-1: #{multiply(--font-size, --ratio)};
+  // --font-size-2: #{multiply(--font-size-1, --ratio)};
+  // --font-size-3: #{multiply(--font-size-2, --ratio)};
+  // --font-size-4: #{multiply(--font-size-3, --ratio)};
+  // --font-size-5: #{multiply(--font-size-4, --ratio)};
+  // --font-size-6: #{multiply(--font-size-5, --ratio)};
+
+  --font-size-1: #{multiply2(--font-size)};
+  --font-size-2: #{multiply2(--font-size-1)};
+  --font-size-3: #{multiply2(--font-size-2)};
+  --font-size-4: #{multiply2(--font-size-3)};
+  --font-size-5: #{multiply2(--font-size-4)};
+  --font-size-6: #{multiply2(--font-size-5)};
+
+  @include media(laptop-L) {
+    --ratio: var(--ratio-laptop-L);
+  }
+
+  @include media(desktop-4k) {
+    --ratio: var(--ratio-desktop-4k);
+  }
+
+  --nav-ratio: 3;
+  --nav-height: #{multiply(--nav-ratio, --ratio)};
+  @include media(laptop-L) {
+    --nav-ratio: 5;
+  }
+
+  @include media(desktop-4k) {
+    --nav-ratio: 7;
+  }
+}

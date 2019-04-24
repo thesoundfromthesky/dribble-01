@@ -1,0 +1,19 @@
+<nav class="navbar">
+  <i class="fas fa-user-astronaut logo"></i>
+  <ul class="nav">
+    <li
+      class="hamburger"
+      appResize
+      (isMobile)="isMobile = $event"
+      (tap)="toggleSlide()"
+    >
+      <!-- <i class="fas fa-bars" (tap)="toggleSlide()"></i> -->
+      <ul class="nav-list" [@.disabled]="!isMobile" [@animation]="slideState" (@animation.done)="animEnd($event)">
+        <li class="nav-item"><a href="#" class="btn btn-yel">Home</a></li>
+        <li class="nav-item"><a href="#" class="btn btn-arrow">Service</a></li>
+        <li class="nav-item"><a href="#" class="btn">About</a></li>
+        <li class="nav-item"><a href="#" class="btn">Contact</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

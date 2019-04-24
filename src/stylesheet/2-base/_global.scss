@@ -1,0 +1,17 @@
+body {
+  min-height: 100vh;
+
+  border: 0.2em solid black;
+  border-radius: 0.7em;
+
+  // padding: 0.5em 0.3em;
+  // @include media(laptop-L) {
+  //   padding: 1em 2em;
+  // }
+  padding: 0 0.3em;
+  @include media(laptop-L) {
+    padding: 0 2em;
+  }
+
+  background: linear-gradient(to bottom right, #379ffe, #2c5ff6, #348dfc);
+}

@@ -1,0 +1,52 @@
+@import "src/stylesheet/1-helper/1-helper";
+
+.navbar {
+  min-height: varrem(--nav-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    background: -webkit-linear-gradient(#df6537, #b72f4a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.hamburger {
+  //   https://stackoverflow.com/questions/49754892/font-awesome-5-why-it-shows-blank-square-when-used-in-pseudo-elements
+  //   https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements
+  &::before {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0c9";
+
+    cursor: pointer;
+
+    @include media(laptop-L) {
+      display: none;
+    }
+  }
+
+  position: relative;
+  .nav-list {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+
+    border-radius: 1em;
+    background: #6137fa;
+    @include media(laptop-L) {
+      position: static;
+      background: none;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
